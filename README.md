@@ -1,1 +1,11 @@
-SPI to IL9314 Graphical LCD
+SPI to ILI9341 Graphical LCD
+>
+Checking we could turn one of these screens upside down for a job
+>
+This was the screen
+https://www.ebay.com/itm/2-2-inch-TFT-LCD-Display-SPI-ILI9341-240x320-for-51-AVR-STM32-ARM-PIC-Arduino-/163356024114
+>
+So I coded up a quick test on the Pi
+>
+![](https://github.com/LdB-ECM/Docs_and_Images/blob/master/Images/upside_down.jpg?raw=true)
+
