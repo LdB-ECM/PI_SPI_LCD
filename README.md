@@ -1,4 +1,5 @@
-SPI to ILI9341 Graphical LCD
+![](https://github.com/LdB-ECM/Docs_and_Images/blob/master/Images/upside_down.jpg?raw=true)
+# SPI to ILI9341 Graphical LCD
 >
 Checking we could turn one of these screens upside down for a job because of tight enclosure the connector had to be on right making the screen mounting upside down.
 >
@@ -9,8 +10,7 @@ You can see normally the pin connector is on left, not the right like in my imag
 >
 So I coded up a quick test on the Pi .. Production is a custom microcontroller which would have required manufacturing a board to test. So the code is hacked together with little care ... you have been warned.
 >
-The SPI code is here
+All the SPI code is in here
 https://github.com/LdB-ECM/PI_SPI_LCD/blob/master/rpi-spi.c
->
-![](https://github.com/LdB-ECM/Docs_and_Images/blob/master/Images/upside_down.jpg?raw=true)
+
 
