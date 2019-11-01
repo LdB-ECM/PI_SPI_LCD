@@ -5,7 +5,7 @@ Checking we could turn one of these screens upside down for a job because of tig
 This was the screen
 https://www.ebay.com/itm/2-2-inch-TFT-LCD-Display-SPI-ILI9341-240x320-for-51-AVR-STM32-ARM-PIC-Arduino-/163356024114
 >
-You can see normally the pin connector is on left, not the right like in my image.
+You can see normally the pin connector is on left, not the right like in my image below.
 >
 So I coded up a quick test on the Pi .. Production is a custom microcontroller which would have required manufacturing a board to test. So the code is hacked together with little care ... you have been warned.
 >
