@@ -11,6 +11,7 @@ You can see normally the pin connector is on left, not the right like in my imag
 So I coded up a quick test on the Pi .. Production is a custom microcontroller which would have required manufacturing a board to test. So the code is hacked together with little care ... you have been warned.
 >
 All the SPI code is in here, start at spi_init
+>
 https://github.com/LdB-ECM/PI_SPI_LCD/blob/master/rpi-spi.c
 
 
