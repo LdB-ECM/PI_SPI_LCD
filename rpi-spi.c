@@ -351,7 +351,7 @@ void spi_init(void)
 
 	gpio_setup(9, GPIO_ALTFUNC0);   // MISO
 	gpio_setup(8, GPIO_ALTFUNC0);   // CS0
-	gpio_setup(7, GPIO_ALTFUNC0);   // CS1 .. USE as RESET
+	gpio_setup(7, GPIO_OUTPUT);   // CS1 .. USE as RESET
 	gpio_setup(10, GPIO_ALTFUNC0);  // MOSI
 	gpio_setup(11, GPIO_ALTFUNC0);  // SCLK
 	gpio_setup(25, GPIO_OUTPUT);	// USE as CMD_DATA
