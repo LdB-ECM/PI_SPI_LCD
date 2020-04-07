@@ -96,7 +96,7 @@ static INTDC extDC[MAX_EXT_DC] = { 0 };
 . As an internal function pairs assumed to be correctly ordered and dc valid.
 .--------------------------------------------------------------------------*/
 static void ClearArea16(INTDC* dc, uint_fast32_t x1, uint_fast32_t y1, uint_fast32_t x2, uint_fast32_t y2) {
-	RGB565* __attribute__((__packed__, aligned(2))) video_wr_ptr = (RGB565*)(uintptr_t)(WINAPI_CB.fb + (y1 * WINAPI_CB.pitch * 2) + (x1 * 2));
+	RGB565* __attribute__((aligned(2))) video_wr_ptr = (RGB565*)(uintptr_t)(WINAPI_CB.fb + (y1 * WINAPI_CB.pitch * 2) + (x1 * 2));
 	for (uint_fast32_t y = 0; y < (y2 - y1); y++) {					// For each y line
 		for (uint_fast32_t x = 0; x < (x2 - x1); x++) {				// For each x between x1 and x2
 			video_wr_ptr[x] = dc->BrushColor565;					// Write the colour
@@ -423,7 +423,7 @@ static void DiagLine32(INTDC * dc, uint_fast32_t dx, uint_fast32_t dy, int_fast8
 . As an internal function the dc is assumed to be valid.
 .--------------------------------------------------------------------------*/
 static void WriteChar32(INTDC * dc, uint8_t Ch) {
-	RGBA* __attribute__((__packed__, aligned(4))) video_wr_ptr = (RGBA*)(uintptr_t)(WINAPI_CB.fb + (dc->curPos.y * WINAPI_CB.pitch * 4) + (dc->curPos.x * 4));
+	RGBA* __attribute__((aligned(4))) video_wr_ptr = (RGBA*)(uintptr_t)(WINAPI_CB.fb + (dc->curPos.y * WINAPI_CB.pitch * 4) + (dc->curPos.x * 4));
 	for (uint_fast32_t y = 0; y < 4; y++) {
 		uint32_t b = BitFont[(Ch * 4) + y];							// Fetch character bits
 		for (uint_fast32_t i = 0; i < 32; i++) {					// For each bit
@@ -444,7 +444,7 @@ static void WriteChar32(INTDC * dc, uint8_t Ch) {
 . As an internal function the dc is assumed to be valid.
 .--------------------------------------------------------------------------*/
 static void TransparentWriteChar32(INTDC * dc, uint8_t Ch) {
-	RGBA* __attribute__((__packed__, aligned(4))) video_wr_ptr = (RGBA*)(uintptr_t)(WINAPI_CB.fb + (dc->curPos.y * WINAPI_CB.pitch * 4) + (dc->curPos.x * 4));
+	RGBA* __attribute__((aligned(4))) video_wr_ptr = (RGBA*)(uintptr_t)(WINAPI_CB.fb + (dc->curPos.y * WINAPI_CB.pitch * 4) + (dc->curPos.x * 4));
 	for (uint_fast32_t y = 0; y < 4; y++) {
 		uint32_t b = BitFont[(Ch * 4) + y];							// Fetch character bits
 		for (uint_fast32_t i = 0; i < 32; i++) {					// For each bit
